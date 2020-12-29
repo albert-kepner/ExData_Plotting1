@@ -44,6 +44,8 @@ data3$DateTime <- dateTime
 par(mfrow=c(1,1))
 plot(data3$DateTime, data3$Global_active_power, 
      type="l",
-     ylab="Global Active Power (kilowatts)",main="Plot 2",
+     ylab="Global Active Power (kilowatts)",
      xlab="time")
 
+dev.copy(png, file = "plot2.png")
+dev.off()

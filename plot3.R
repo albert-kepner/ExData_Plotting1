@@ -51,3 +51,7 @@ legend( x="topright",
         legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
         col=c("black","red","blue"), lwd=2, lty=1, 
         merge=FALSE, cex=0.7 )
+
+dev.copy(png, file = "plot3.png")
+dev.off()
+

@@ -72,3 +72,6 @@ plot(data3$DateTime, data3$Global_reactive_power,
      type="l",
      ylab="Global Reactive Power",
      xlab="datetime")
+
+dev.copy(png, file = "plot4.png")
+dev.off()
