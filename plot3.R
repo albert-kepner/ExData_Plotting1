@@ -26,7 +26,7 @@ data <- read.table(
 ## Filter the data keeping only the two desired dates:
 data2 <- data[ data$Date == "1/2/2007" | data$Date == "2/2/2007", ]
 
-str(data2)
+## str(data2)
 dim(data2)
 ## This confirms that we have now have 2880 observations of 9 variables.
 
@@ -41,3 +41,13 @@ data3$DateTime <- dateTime
 ## data3 now contains the original data set with an added column DateTime 
 ## (actual Date/Time "POSIXlt" representation)
 
+par(mfrow=c(1,1))
+plot(data3$DateTime, data3$Sub_metering_1, col="black", type="l",
+     ylab="Energy sub metering", xlab="time", main="Plot3")
+lines(data3$DateTime, data3$Sub_metering_2, col="red", type="l")
+lines(data3$DateTime, data3$Sub_metering_3, col="blue", type="l")
+
+legend( x="topright", 
+        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), 
+        col=c("black","red","blue"), lwd=2, lty=1, 
+        merge=FALSE, cex=0.7 )
