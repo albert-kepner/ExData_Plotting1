@@ -1,5 +1,5 @@
-## plot1.R
-## Global Active Power Histogram
+## plot2.R
+## Plot of Global Active Power vesus time (minutes) for 2007-02-01 and 2007-02-02
 
 ## Data to be read from input file at ./data/household_power_consumption.txt
 ##
@@ -40,9 +40,4 @@ data3 <- data2
 data3$DateTime <- dateTime
 ## data3 now contains the original data set with an added column DateTime 
 ## (actual Date/Time "POSIXlt" representation)
-
-hist(data3$Global_active_power, main="Global Active Power",
-     xlab="Global Active Power (kilowatts)",
-     col="red")
-
 

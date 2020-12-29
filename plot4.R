@@ -1,5 +1,9 @@
-## plot1.R
-## Global Active Power Histogram
+## plot4.R
+## Grid of 4 Plots versus time:
+## 1) Global Active Power
+## 2) Voltage
+## 3) sub metering
+## 4) Global Reactive Power
 
 ## Data to be read from input file at ./data/household_power_consumption.txt
 ##
@@ -40,9 +44,4 @@ data3 <- data2
 data3$DateTime <- dateTime
 ## data3 now contains the original data set with an added column DateTime 
 ## (actual Date/Time "POSIXlt" representation)
-
-hist(data3$Global_active_power, main="Global Active Power",
-     xlab="Global Active Power (kilowatts)",
-     col="red")
-
 
